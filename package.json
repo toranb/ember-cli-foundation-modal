@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-foundation-modal",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A modal mixin for zerb foundation and ember.js",
   "directories": {
     "doc": "doc",

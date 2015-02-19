@@ -4,7 +4,7 @@
 
 ## Description
 
-[ember-cli][] addon that provides a simple foundation modal for [ember.js][] web applications
+[ember-cli][] addon that provides a simple zurb foundation 5.5 modal for [ember.js][] web applications
 
 ## Installation
 

@@ -1,6 +1,7 @@
 # ember-cli-foundation-modal
 
 [![Build Status][]](https://travis-ci.org/toranb/ember-cli-foundation-modal)
+[![NPM Downloads][]](https://www.npmjs.org/package/ember-cli-foundation-modal)
 
 ## Description
 
@@ -67,7 +68,7 @@ Copyright © 2015 Toran Billups http://toranbillups.com
 
 Licensed under the MIT License
 
-
+[NPM Downloads]: https://img.shields.io/npm/dm/ember-cli-foundation-modal
 [Build Status]: https://travis-ci.org/toranb/ember-cli-foundation-modal.svg?branch=master
 [ember-cli]: http://www.ember-cli.com/
 [ember.js]: http://emberjs.com/

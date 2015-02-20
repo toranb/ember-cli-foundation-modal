@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-foundation-modal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A modal mixin for zurb foundation 5.5",
   "directories": {
     "doc": "doc",

@@ -1,4 +1,4 @@
-const DEFAULT_ELEMENT = "div.ember-view";
+var DEFAULT_ELEMENT = "div.ember-view";
 
 export default function initialize(container, application) {
   var modalRoot = application.foundationModalElement || DEFAULT_ELEMENT;

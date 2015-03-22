@@ -12,12 +12,12 @@
     "test": "ember test"
   },
   "bugs": {
-      "url": "https://github.com/toranb/ember-cli-foundation-modal/issues"
+    "url": "https://github.com/toranb/ember-cli-foundation-modal/issues"
   },
   "homepage": "https://github.com/toranb/ember-cli-foundation-modal",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/toranb/ember-cli-foundation-modal"
+    "type": "git",
+    "url": "https://github.com/toranb/ember-cli-foundation-modal"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -37,7 +37,8 @@
     "ember-cli-qunit": "0.3.9",
     "ember-cli-uglify": "1.0.1",
     "ember-export-application-global": "^1.0.2",
-    "phantomjs": "~1.9.13"
+    "phantomjs": "~1.9.13",
+    "ember-cli-es5-shim": "~0.1.0"
   },
   "keywords": [
     "ember-addon",

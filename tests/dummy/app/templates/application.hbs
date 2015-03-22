@@ -1,3 +1,14 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
+<div id="my-modal" class="modal reveal-modal medium" data-reveal>
+  <div class="modal-header">
+    hello world
+    <button id="btn-close-modal" {{action "hideModal"}}>Close</button>
+  </div>
+</div>
+
+<div class="click-me">
+  <button id="btn-open-modal" {{action "showModal"}}>Click Me</button>
+</div>
+
 {{outlet}}

@@ -5,7 +5,7 @@
 
 ## Description
 
-[ember-cli][] addon that provides a simple zurb foundation 5.5 modal for [ember.js][] web applications
+[ember-cli][] addon that sets the foundation reveal root_element to a value that you customize or a reasonable default.
 
 ## Installation
 
@@ -21,39 +21,18 @@ bower install zurb foundation 5.5
 bower install foundation --save
 ```
 
-add the css file to your Brocfile
+The purpose of this project is to set a reasonable default for reveal's modal location. This default will work great as long as your app doesn't have nested routes.
+
+More than likely, you will need to customize the location of the modal further by assigning it to the top level div in your ember application. To do this, customize the APP portion your environment.js file.
 
 ```js
-app.import('bower_components/foundation/css/foundation.css');
-```
-
-add the modal bg div to your application.hbs
-
-```js
-<div class="reveal-modal-bg" {{bind-attr style=modalBackgroundStyle}}></div>
-```
-
-add the mixin to your application controller
-
-```js
-import ApplicationModalMixin from "ember-cli-foundation-modal/mixins/foundation-app-modal";
-export default Ember.Controller.extend(ApplicationModalMixin);
-```
-
-add the html for the modal to any template and a button to toggle it
-
-```js
-<div {{bind-attr style=modalStyle}} id="resolveModal" class="modal reveal-modal medium" data-reveal>
-  <button id="close-btn" {{action "toggleModal"}}>Close</button>
-</div>
-<button id="open-btn" {{action "toggleModal"}}>Open</button>
-```
-
-add the mixin to the controller backing the above template
-
-```js
-import ModalMixin from "ember-cli-foundation-modal/mixins/foundation-modal";
-export default Ember.Controller.extend(ModalMixin);
+module.exports = function(/* environment, appConfig */) {
+  return { 
+    APP: {
+      foundationModalElement: '#ember-application'
+    }
+  };
+};
 ```
 
 ## Running Tests

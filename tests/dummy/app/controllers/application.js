@@ -1,6 +1,12 @@
 import Ember from "ember";
-import ApplicationModalMixin from "ember-cli-foundation-modal/mixins/foundation-app-modal";
 
-var ApplicationController = Ember.Controller.extend(ApplicationModalMixin);
-
-export default ApplicationController;
+export default Ember.Controller.extend({
+    actions: {
+        showModal: function() {
+            return $("#my-modal").foundation("reveal", "open");
+        },
+        hideModal: function() {
+            return $("#my-modal").foundation("reveal", "close");
+        }
+    }
+});

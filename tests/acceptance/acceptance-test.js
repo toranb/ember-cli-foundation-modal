@@ -2,6 +2,18 @@ import Ember from "ember";
 import { test } from 'ember-qunit';
 import startApp from '../helpers/start-app';
 
+var waitFor = function(callback) {
+    return andThen(function() {
+        stop();
+        Ember.run.later(function() {
+             callback();
+             start();
+        }, 500);
+    });
+};
+
+Ember.Test.registerHelper("waitFor", waitFor);
+
 var App;
 
 module('FoundationModal Acceptance Test', {
@@ -13,26 +25,20 @@ module('FoundationModal Acceptance Test', {
     }
 });
 
-test("can open and close the modal when used correctly", function() {
-    visit("/foo");
-    andThen(function() {
-        var modalStyle = find("#resolveModal");
-        equal(modalStyle.attr("style"), undefined);
-        var backgroundStyle = find(".reveal-modal-bg");
-        equal(backgroundStyle.attr("style"), "display: none");
+test("can open and close the modal when used correctly", function(assert) {
+    visit("/");
+    waitFor(function() {
+        var theModal = find("#my-modal");
+        assert.ok(theModal.is(":hidden"));
     });
     click("#btn-open-modal");
-    andThen(function() {
-        var modalStyle = find("#resolveModal");
-        equal(modalStyle.attr("style"), "display: block; opacity: 1; visibility: visible; top: 100px;");
-        var backgroundStyle = find(".reveal-modal-bg");
-        equal(backgroundStyle.attr("style"), "display: block");
+    waitFor(function() {
+        var theModal = find("#my-modal");
+        assert.ok(!theModal.is(":hidden"));
     });
     click("#btn-close-modal");
-    andThen(function() {
-        var modalStyle = find("#resolveModal");
-        equal(modalStyle.attr("style"), undefined);
-        var backgroundStyle = find(".reveal-modal-bg");
-        equal(backgroundStyle.attr("style"), "display: none");
+    waitFor(function() {
+        var theModal = find("#my-modal");
+        assert.ok(theModal.is(":hidden"));
     });
 });

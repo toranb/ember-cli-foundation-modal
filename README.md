@@ -21,6 +21,20 @@ bower install zurb foundation 5.5
 bower install foundation --save
 ```
 
+The purpose of this project is to set a reasonable default for reveal's modal location. This default will work great as long as your app doesn't have nested routes.
+
+More than likely, you will need to customize the location of the modal further by assigning it to the top level div in your ember application. To do this, customize the APP portion your environment.js file.
+
+```js
+module.exports = function(/* environment, appConfig */) {
+  return { 
+    APP: {
+      foundationModalElement: '#ember-application'
+    }
+  };
+};
+```
+
 ## Running Tests
 
     npm install

@@ -25,11 +25,14 @@ The purpose of this project is to set a reasonable default for reveal's modal lo
 
 More than likely, you will need to customize the location of the modal further by assigning it to the top level div in your ember application. To do this, customize the APP portion your environment.js file.
 
+In addition, you probably don't want to wait for the modal during your tests, so you should set the animation speed for the modal 0 for your tests.
+
 ```js
 module.exports = function(/* environment, appConfig */) {
   return { 
     APP: {
-      foundationModalElement: '#ember-application'
+      foundationModalElement: '#ember-application',
+      foundationModalAnimationSpeed: 100
     }
   };
 };

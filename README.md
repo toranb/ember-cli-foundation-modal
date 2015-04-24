@@ -32,7 +32,7 @@ module.exports = function(/* environment, appConfig */) {
   return { 
     APP: {
       foundationModalElement: '#ember-application',
-      foundationModalAnimationSpeed: 100
+      foundationModalAnimationSpeed: 0
     }
   };
 };

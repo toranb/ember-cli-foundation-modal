@@ -8,7 +8,7 @@ var waitFor = function(callback) {
         Ember.run.later(function() {
              callback();
              start();
-        }, 500);
+        }, 1);
     });
 };
 

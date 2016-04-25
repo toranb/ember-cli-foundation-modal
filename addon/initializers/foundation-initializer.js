@@ -1,7 +1,7 @@
 var DEFAULT_ELEMENT = "div.ember-view";
 var DEFAULT_ANIMATION_SPEED = 250;
 
-export default function initialize(container, application) {
+export default function initialize(application) {
   // this should be the root element of the ember app
   var modalRoot = application.foundationModalElement || DEFAULT_ELEMENT;
 

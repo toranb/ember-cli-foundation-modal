@@ -15,6 +15,10 @@ npm install ember-cli-foundation-modal --save-dev
 
 ## To use this modal in your app
 
+If you are using Ember 1.X or < 2.1 you will need to use version 0.3.1. Ember 2.1 introduced an [API change] to the initializers that removed `container` as the first argument.
+
+Versions of Ember > 2.1 will be deprecation free with 1.0.0.
+
 bower install zurb foundation 5.5
 
 ```js
@@ -29,7 +33,7 @@ In addition, you probably don't want to wait for the modal during your tests, so
 
 ```js
 module.exports = function(/* environment, appConfig */) {
-  return { 
+  return {
     APP: {
       foundationModalElement: '#ember-application',
       foundationModalAnimationSpeed: 0
@@ -50,6 +54,7 @@ Copyright © 2015 Toran Billups http://toranbillups.com
 
 Licensed under the MIT License
 
+[API change]: http://emberjs.com/deprecations/v2.x/#toc_initializer-arity
 [NPM Downloads]: https://img.shields.io/npm/dm/ember-cli-foundation-modal.svg
 [Build Status]: https://travis-ci.org/toranb/ember-cli-foundation-modal.svg?branch=master
 [ember-cli]: http://www.ember-cli.com/
